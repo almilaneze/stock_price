@@ -13,11 +13,13 @@ def populate():
     user_sql_3 = "GRANT SELECT, INSERT, UPDATE, DELETE on stock_price to 'web_user';"
 
     #rds settings
-    rds_host = input("Database host> ")
-    db_user = input("Database user> ")
-    password = input("Database password> ")
-    db_name = input("Database name> ")
-    app_password = input("web_user password> ")
+#    rds_host = input("Database host> ")
+    rds_host = 'stock-price.cy7sqhnzh0bz.us-east-1.rds.amazonaws.com'
+#    db_user = input("Database user> ")
+    db_user = 'stock_master'
+    password = '1qaz2wSX'
+    db_name = 'stock-price'
+    app_password = '1qaz2wSX'
 
     conn = mysql.connector.connect(user=db_user, password=password,
                                    host=rds_host,
